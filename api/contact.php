@@ -3,7 +3,7 @@
    POST /api/contact.php : demande de rappel du formulaire /contact/
    Gratuit : utilise mail() de PHP, disponible chez la plupart des hébergeurs
    (dont l'hébergement LiteSpeed actuel). Aucun service tiers.
-   Réponse JSON si appelé en fetch, sinon redirection vers /contact/?envoye=1.
+   Réponse JSON si appelé en fetch, sinon redirection vers /contact/#envoye ou #erreur (messages affichés en CSS, sans JS).
    ========================================================================== */
 
 const NOTIFY_TO = 'adrian.osteo38@gmail.com';   // destinataire des demandes
@@ -18,7 +18,7 @@ function reply(bool $ok, int $code = 200, ?string $field = null, ?string $error 
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode(array_filter(['ok' => $ok, 'field' => $field, 'error' => $error], fn ($v) => $v !== null), JSON_UNESCAPED_UNICODE);
   } else {
-    header('Location: /contact/' . ($ok ? '?envoye=1' : '?erreur=1') . '#form-t', true, 303);
+    header('Location: /contact/' . ($ok ? '#envoye' : '#erreur'), true, 303);
   }
   exit;
 }
