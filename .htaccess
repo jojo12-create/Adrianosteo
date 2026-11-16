@@ -15,14 +15,18 @@ ErrorDocument 404 /404.html
 
   # Redirections 301 des anciennes pages (conservent le référencement acquis)
   RewriteRule ^index\.html$ / [L,R=301]
-  RewriteRule ^nourrissons\.html$ /osteopathie/bebe-enfant/ [L,R=301]
-  RewriteRule ^nourissons\.html$ /osteopathie/bebe-enfant/ [L,R=301]
-  RewriteRule ^enfants\.html$ /osteopathie/bebe-enfant/ [L,R=301]
-  RewriteRule ^adultes\.html$ /osteopathie/mal-de-dos/ [L,R=301]
+  RewriteRule ^nourrissons\.html$ /osteopathie/nourrissons/ [L,R=301]
+  RewriteRule ^nourissons\.html$ /osteopathie/nourrissons/ [L,R=301]
+  RewriteRule ^enfants\.html$ /osteopathie/enfants-adolescents/ [L,R=301]
+  RewriteRule ^adultes\.html$ /osteopathie/adultes/ [L,R=301]
   RewriteRule ^femmes-enceintes\.html$ /osteopathie/femme-enceinte/ [L,R=301]
   RewriteRule ^seniors\.html$ /osteopathie/seniors/ [L,R=301]
   RewriteRule ^sportifs\.html$ /osteopathie/sportifs/ [L,R=301]
   RewriteRule ^mentionslegales\.html$ /mentions-legales/ [L,R=301]
+  # Anciennes URL de la version précédente
+  RewriteRule ^osteopathie/mal-de-dos/?$ /osteopathie/lombalgie/ [L,R=301]
+  RewriteRule ^osteopathie/nuque-cervicales/?$ /osteopathie/cervicalgie/ [L,R=301]
+  RewriteRule ^osteopathie/bebe-enfant/?$ /osteopathie/nourrissons/ [L,R=301]
 </IfModule>
 
 # Compression
