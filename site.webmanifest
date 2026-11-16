@@ -1,0 +1,21 @@
+{
+  "name": "Adrian Rodriguez, ostéopathe à Villefontaine",
+  "short_name": "Adrian Ostéo",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#faf8f3",
+  "theme_color": "#243c2f",
+  "icons": [
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
